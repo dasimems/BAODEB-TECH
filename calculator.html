@@ -1,0 +1,1103 @@
+<html>
+
+    <head>
+    
+        <title>Calculator</title>
+        
+        <style>
+        
+            .calculator{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 10.7cm;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 10px 10px black;
+    min-width: 10.7cm;
+    max-width: 10.7cm;
+    
+}
+
+.logo{
+    width: 10%;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.calculator-contents{
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid black;
+    background: white;
+    
+}
+
+.input-cal-data{
+    width: 100%;
+    display: none;
+}
+
+.result{
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    font-size: 25px;
+}
+
+.calculator-contents-one{
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px black solid;
+}
+
+#calculator-input{
+    width: 100%;
+    height: 70px;
+    text-align: right;
+    padding: 5px;
+    border-bottom: none;
+    font-size: 18px;
+}
+
+#calculator-input:focus{
+    border: none;
+}
+
+.calculator-contents-two{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.calculator-content-two-content-one{
+    width: 100%;
+    display: flex;
+}
+
+.calculator-content-two-content-one-btn-one{
+   width: 50%; 
+    display: flex;
+    
+}
+
+#shift-btn{
+    margin-left: 3%;
+}
+
+.cal-header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.mode{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+#close-mode{
+    color: red;
+    margin-left: 3%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#close-mode:hover{
+    color: white;
+}
+
+.mode-button{
+    width: 70%;
+    display: none;
+    background-color: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.mode-btn{
+    width: 30%;
+    background: rgb(51,51,51);
+    text-align: center;
+    color: burlywood;
+}
+
+.cal-con-one-tex-one{
+    display: none;
+}
+
+.cal-con-one-tex-two{
+    display: none;
+}
+
+#cal-con-one-text{
+    width: 100%;
+    justify-content: center;
+    font-family: arial;
+    color: blue;
+    font-size: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#radian-btn{
+    margin-right: 3%;
+}
+
+
+.calculator-content-two-content-one-btn-two{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+#mode-btn{
+    margin-right: 3%;
+}
+
+.on-off-btn{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: white;
+    background: black;
+    box-shadow: 2.5px 2.5px black;
+}
+
+.on-off-btn:hover{
+    background: rgb(137,137,0);
+    box-shadow: none;
+}
+
+#on-btn{
+    margin-right: 5px;
+}
+
+
+.calculator-content-two-content-two{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+}
+
+
+.cal-con-two-btn{
+    height: 100%;
+    font-size: 15px;
+    width: 100%;
+    background: grey;
+    font-family: Cambria;
+    color: black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+.cal-con-two-btn-extra{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin-top: 0px;
+    font-family: Cambria;
+    padding-top: 3px;
+    font-size: 15px;
+    color: black;
+    padding-bottom: 3px;
+    background: grey;
+}
+
+.calculator-content-two-content-two-btn{
+    font-size: 15px;
+    height: 30px;
+    width: 13%; 
+    margin-left: 8.4%;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    overflow: hidden;
+}
+
+.cal-con-two-btn:hover{
+    background: rgba(0,0,0,0.7);
+}
+
+.cal-con-two-btn-extra:hover{
+    background: rgba(0,0,0,0.7);
+}
+
+
+.calculator-content-two-content-two-btn:hover{
+    box-shadow: none;
+}
+
+.calculator-content-two-content-two-btn:first-child{
+    margin-left: 0px;
+}
+
+.calculator-content-three{
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+.cal-con-three-btn{
+    width: 16.7%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 3.5%;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 3px 3px grey;
+}
+
+#multiply-btn{
+    text-transform: lowercase;
+}
+
+#del-btn, #reset{
+    background: red;
+}
+
+#del-btn:hover{
+    background: rgb(194,1,30);
+}
+#reset:hover{
+    background: rgb(194,1,30);
+}
+
+.cal-con-three-btn:first-child{
+    margin-left: 0px;
+}
+
+.cal-con-three-btn:hover{
+    background: rgba(0,0,0,0.3);
+    box-shadow: none;
+}
+            
+        </style>
+        
+        <script type="text/javascript">
+        
+            //disable keys
+var image_save_msg='you cannot save images!';
+var no_menu_msg='context menu disabled!';
+var smessage ="content is protected!!";
+
+function disableEnterKey(e)
+{
+if (e.ctrlKey){
+var key;
+if(window.event)
+key = window.event.keyCode;//IE
+else
+key=e.which;//firefox(97)
+//if (key!=17)alert(key);
+if(key==97||key==65||key==67||key==99||key==88||key==120||key==26||key==85||key==86||key==83||key==43)
+{
+show_wpcp_message('you are not allowed to copy content or view source');
+return false;
+}else
+return true;
+}
+}
+
+
+
+function disable_copy(e)
+{
+var elemtype=e.target.nodeName;
+var isSafari=/Safari/.test(navigator.userAgent)&& /Apple Computer/.test(navigator.vendor);
+elemtype=elemtype.toUpperCase();
+var checker_IMG="";
+if(elemtype=="IMG"&&checker_IMG=='checked'&&e.detail>=2){show_wpcp_message(alertMSq_IMG);return false;}
+if(elemtype!="TEXT"&&elemtype!="TEXTAREA"&&elemtype!="INPUT"&&elemtype!="PASSWORD"&&elemtype!="SELECT"&&elemtype!="OPTION"&&elemtype!="EMBED")
+{
+if(smessage!==""&&e.detail==2)
+show_wpcp_message(smessage);
+
+if(isSafari)
+return true;
+else
+return false;
+}
+}
+function disable_copy_ie()
+{
+var elemtype=window.event.srcElement.nodeName;
+elemtype=elemtype.toUpperCase();
+if(elemtype=="IMG"){show_wpcp_message(alertMsq_IMG);return false;}
+if(elemtype!="TEXT"&&elemtype!="SELECT"&&elemtype!="TEXTAREA"&&elemtype!="INPUT"&&elemtype!="PASSWORD"&&elemtype!="OPTION"&&elemtype!="EMBED")
+{
+//alert(navigator.userAgent.indexOf('MSIE'));
+//if(smessage!=="")show_wpcp_message(smessage);
+return false;
+}
+}
+
+
+function inputTextarea() {
+
+    var regex = /\d/;
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value.trim() == "0") {
+        textareaInput.value = "0";
+    }
+
+}
+
+function mode() {
+
+    var inputDiv = document.querySelector('.input-cal-data');
+    var mode = document.querySelector('.mode-button');
+    var textareaInput = document.getElementById('calculator-input');
+
+    if(inputDiv.style.display=="block"){
+        mode.style.display="flex";
+        textareaInput.focus
+    }else{
+        mode.style.display="none";
+    }
+   
+   
+}
+
+function closeMode() {
+
+    var mode = document.querySelector('.mode-button');
+    var textareaInput = document.getElementById('calculator-input');
+
+    mode.style.display = "none";
+    textareaInput.focus();
+}
+
+function enShift() {
+
+    var inputDiv = document.querySelector('.input-cal-data');
+    var arcin = document.getElementById('arc-sin');
+    var arcos = document.getElementById('arc-cos');
+    var arcan = document.getElementById('arc-tan');
+    var xRoot = document.getElementById('x-root');
+    var textareaInput = document.getElementById('calculator-input');
+
+    if(inputDiv.style.display=="block"){
+        arcin.style.marginTop = "-30px";
+        arcos.style.marginTop = "-30px";
+        arcan.style.marginTop = "-30px";
+        xRoot.style.marginTop = "-30px";
+        textareaInput.focus();
+    }else{
+        arcin.style.marginTop = "0px";
+        arcos.style.marginTop = "0px";
+        arcan.style.marginTop = "0px";
+        xRoot.style.marginTop = "0px";
+    }
+
+}
+
+function disShift() {
+
+    var arcin = document.getElementById('arc-sin');
+    var arcos = document.getElementById('arc-cos');
+    var arcan = document.getElementById('arc-tan');
+    var xRoot = document.getElementById('x-root');
+    var textareaInput = document.getElementById('calculator-input');
+
+    arcin.style.marginTop = "0px";
+    arcos.style.marginTop = "0px";
+    arcan.style.marginTop = "0px";
+    xRoot.style.marginTop = "0px";
+    textareaInput.focus();
+
+}
+
+function deg() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one');
+    var mode = document.querySelector('.mode-button');
+    var textareaInput = document.getElementById('calculator-input');
+    var inputDiv = document.querySelector('.input-cal-data');
+
+    mode.style.display = "none";
+
+    rad.style.display = "none";
+    deg.style.display = "block";
+    textareaInput.focus();
+
+}
+
+
+function rad() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one');
+    var mode = document.querySelector('.mode-button');
+    var textareaInput = document.getElementById('calculator-input');
+
+    mode.style.display = "none";
+
+    rad.style.display = "block";
+    deg.style.display = "none";
+    textareaInput.focus();
+
+}
+
+function on() {
+
+    var inputDiv = document.querySelector('.input-cal-data');
+    var inputBox = document.getElementById('calculator-input');
+    var calResult = document.querySelector('.result');
+    var arcin = document.getElementById('arc-sin');
+    var arcos = document.getElementById('arc-cos');
+    var arcan = document.getElementById('arc-tan');
+    var xRoot = document.getElementById('x-root');
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one');
+    var mode = document.querySelector('.mode-button');
+
+    mode.style.display = "none";
+
+    arcin.style.marginTop = "0px";
+    arcos.style.marginTop = "0px";
+    arcan.style.marginTop = "0px";
+    xRoot.style.marginTop = "0px";
+
+    inputDiv.style.display = "block";
+    inputBox.style.background = "rgba(0,0,0,0.05)";
+    calResult.style.background = "rgba(0,0,0,0.05)";
+    inputBox.focus();
+    inputBox.value = "0";
+
+    if(rad.style.display=="block" || deg.style.display=="none"){
+        rad.style.display = "block";
+        deg.style.display = "none";
+    }else{
+        rad.style.display = "none";
+        deg.style.display = "block";
+    }
+}
+
+function off() {
+
+    var inputDiv = document.querySelector('.input-cal-data');
+    var arcin = document.getElementById('arc-sin');
+    var arcos = document.getElementById('arc-cos');
+    var arcan = document.getElementById('arc-tan');
+    var xRoot = document.getElementById('x-root');
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one');
+    var mode = document.querySelector('.mode-button');
+
+    mode.style.display = "none";
+
+    arcin.style.marginTop = "0px";
+    arcos.style.marginTop = "0px";
+    arcan.style.marginTop = "0px";
+    xRoot.style.marginTop = "0px";
+    document.getElementById('mode-btn').disabled;
+    inputDiv.style.display = "none";
+    rad.style.display = "none";
+    deg.style.display = "none";
+
+}
+
+function reset() {
+
+    var textareaInput = document.getElementById('calculator-input');
+    var calResult = document.querySelector('.result');
+
+    textareaInput.value = "0";
+    calResult.innerHTML = "";
+    textareaInput.focus();
+
+}
+
+function one() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "1";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "1";
+        textareaInput.focus();
+    }
+}
+
+function two() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "2";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "2";
+        textareaInput.focus();
+    }
+}
+
+function three() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "3";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "3";
+        textareaInput.focus();
+    }
+}
+
+function four() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "4";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "4";
+        textareaInput.focus();
+    }
+}
+
+function five() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "5";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "5";
+        textareaInput.focus();
+    }
+}
+
+function six() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "6";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "6";
+        textareaInput.focus();
+    }
+}
+
+function seven() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "7";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "7";
+        textareaInput.focus();
+    }
+}
+
+function eight() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "8";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "8";
+        textareaInput.focus();
+    }
+}
+
+function nine() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "9";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "9";
+        textareaInput.focus();
+    }
+}
+
+function zero() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "0";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "0";
+        textareaInput.focus();
+    }
+}
+
+function multiply() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value + "*";
+    textareaInput.focus();
+}
+
+function divide() {
+
+    var division = "/";
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value + division;
+    textareaInput.focus();
+}
+
+function plus() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value + "+";
+    textareaInput.focus();
+}
+
+function minus() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value + "-";
+    textareaInput.focus();
+}
+
+function dot() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value + ".";
+    textareaInput.focus();
+}
+
+function modulos() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value / 100;
+    textareaInput.focus();
+}
+
+function pi() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = Math.PI;
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + Math.PI;
+        textareaInput.focus();
+    }
+}
+
+function square() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value * textareaInput.value;
+    textareaInput.focus();
+}
+
+function cube() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value * textareaInput.value * textareaInput.value;
+    textareaInput.focus();
+}
+
+function plusMinus() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = "-" + textareaInput.value;
+    textareaInput.focus();
+}
+
+function leftBracket() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = "(";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + "(";
+        textareaInput.focus();
+    }
+}
+
+function rightBracket() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    if (textareaInput.value == "0" || textareaInput.value == "" || textareaInput.value == "-0") {
+        textareaInput.value = ")";
+        textareaInput.focus();
+    } else {
+        textareaInput.value = textareaInput.value + ")";
+        textareaInput.focus();
+    }
+}
+
+function squareRoot() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = Math.sqrt(textareaInput.value);
+    textareaInput.focus();
+}
+
+function cubeRoot() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = Math.cbrt(textareaInput.value);
+    textareaInput.focus();
+}
+
+function sin() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one');
+    var textareaInput = document.getElementById('calculator-input');
+    if(rad.style.display=="block" || deg.style.display=="none"){
+        textareaInput.value = Math.sin(textareaInput.value);
+        textareaInput.focus(); 
+    }else{
+    textareaInput.value = Math.sin(textareaInput.value * Math.PI / 180);
+    textareaInput.focus();
+    }
+}
+
+function arcSin() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one'); 
+    var textareaInput = document.getElementById('calculator-input');
+    
+    if(rad.style.display=="block" || deg.style.display=="none"){
+        textareaInput.value = Math.asin(textareaInput.value);
+        textareaInput.focus();
+    }else{
+        textareaInput.value = Math.asin(textareaInput.value) / (Math.PI / 180);
+        textareaInput.focus();
+    }
+
+    
+}
+
+function cos() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one'); 
+    var textareaInput = document.getElementById('calculator-input');
+    
+    if(rad.style.display=="block" || deg.style.display=="none"){
+        textareaInput.value = Math.cos(textareaInput.value);
+        textareaInput.focus();
+    }else{
+        textareaInput.value = Math.cos(textareaInput.value * Math.PI / 180);
+        textareaInput.focus();
+    }
+}
+
+function arcCos() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one'); 
+    var textareaInput = document.getElementById('calculator-input');
+    
+    if(rad.style.display=="block" || deg.style.display=="none"){
+        textareaInput.value = Math.acos(textareaInput.value);
+        textareaInput.focus();
+    }else{
+        textareaInput.value = Math.acos(textareaInput.value) / (Math.PI / 180);
+        textareaInput.focus();
+}
+    }
+
+function tan() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one'); 
+    var textareaInput = document.getElementById('calculator-input');
+    
+    if(rad.style.display=="block" || deg.style.display=="none"){
+        textareaInput.value = Math.tan(textareaInput.value);
+        textareaInput.focus();   
+    }else{
+        textareaInput.value = Math.tan(textareaInput.value * Math.PI / 180);
+        textareaInput.focus();
+    }
+}
+
+function arcTan() {
+
+    var deg = document.querySelector('.cal-con-one-tex-two');
+    var rad = document.querySelector('.cal-con-one-tex-one'); 
+    var textareaInput = document.getElementById('calculator-input');
+    
+    if(rad.style.display=="block" || deg.style.display=="none"){
+        textareaInput.value = Math.atan(textareaInput.value);
+        textareaInput.focus();
+    }else{
+        textareaInput.value = Math.atan(textareaInput.value) / (Math.PI / 180);
+        textareaInput.focus();
+    }
+}
+
+function tenRaiseTo() {
+
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = Math.pow(10, textareaInput.value);
+    textareaInput.focus();
+
+}
+
+function log(){
+  
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = Math.log(textareaInput.value);
+    textareaInput.focus();
+
+}
+
+function raiseTo(){
+    var textareaInput = document.getElementById('calculator-input');
+
+    textareaInput.value = textareaInput.value + "**";
+    textareaInput.focus();
+}
+
+            
+        </script>
+        
+        <link rel="icon" href="css/img/favicon.ico">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <script src="js/javascript.js"></script>
+        
+    </head>
+    
+    <body>
+    
+        <div class="calculator">
+            
+            <div class="cal-header">
+        
+            <div class="logo"><img src="css/img/logo.jpg" alt="logo"></div>
+                
+                <div class="mode">
+                    <div class="mode-button">
+                    <button class="mode-btn" id="radian-btn" onclick="rad()">rad</button>
+                    <button class="mode-btn" id="degree-btn" onclick="deg()">deg</button>
+                        <a id="close-mode" onclick="closeMode()"><b>&times;</b></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="calculator-contents">
+                
+                    <div id="cal-con-one-text">
+                    <div class="cal-con-one-tex-one">RAD</div>
+                    <div class="cal-con-one-tex-two">DEG</div>
+                    </div>
+            
+                <div class="calculator-contents-one">
+                    
+                    
+                    <div class="input-cal-data">
+                
+                    <textarea id="calculator-input" onfocus="focusTextarea()" oninput="inputTextarea()"></textarea>
+                    <div class="result"></div>
+                
+                </div>
+                
+                    
+                    </div>
+                
+                <div class="calculator-contents-two">
+                
+                    <div class="calculator-content-two-content-one">
+                        <div class="calculator-content-two-content-one-btn-one" align="left">
+                            <button class="on-off-btn" id="off-btn" onclick="off()">Off</button>
+                            <button class="on-off-btn" id="shift-btn" onclick="enShift()" ondblclick="disShift()">shift</button>
+                        </div>
+                        <div class="calculator-content-two-content-one-btn-two" align="right">
+                       <button class="on-off-btn" id="mode-btn" onclick="mode()">mode</button> 
+                       <button class="on-off-btn" id="on-btn" onclick="on()">On</button> 
+                        </div>
+                    </div>
+                    <div class="calculator-content-two-content-two">
+                        
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="pie" onclick="pi()"><b>&pi;</b></button>
+                        </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="arrow-left" onclick="arrowLeft()"><b>&larr;</b></button>
+                            </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="arrow-right" onclick="arrowRight()"><b>&rarr;</b></button>
+                            </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="mudulos" onclick="modulos()"><b>&#37;</b></button>
+                            </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="sin" onclick="sin()"><b>sin</b></button>
+                        <button class="cal-con-two-btn-extra" id="arc-sin" onclick="arcSin()"><b>sin&die;&sup1;</b></button>
+                            </div>
+                    
+                    </div>
+                    
+                     <div class="calculator-content-two-content-two">
+                        <div class="calculator-content-two-content-two-btn">
+                            <button class="cal-con-two-btn" id="cos" onclick="cos()"><b>cos</b></button>
+                            <button class="cal-con-two-btn-extra" id="arc-cos" onclick="arcCos()"><b>cos&die;&sup1;</b></button>
+                         </div>
+                         <div class="calculator-content-two-content-two-btn">
+                         <button class="cal-con-two-btn" id="tan" onclick="tan()"><b>tan</b></button>
+                         <button class="cal-con-two-btn-extra" id="arc-tan" onclick="arcTan()"><b>tan&die;&sup1;</b></button>
+                         </div>
+                         <div class="calculator-content-two-content-two-btn">
+                         <button class="cal-con-two-btn" id="ten-raise-to" onclick="tenRaiseTo()"><b>10<sup>e</sup></b></button>
+                         </div>
+                         <div class="calculator-content-two-content-two-btn">
+                         <button class="cal-con-two-btn" id="log" onclick="log()"><b>log</b></button>
+                         </div>
+                         <div class="calculator-content-two-content-two-btn">
+                         <button class="cal-con-two-btn" id="modu" onclick="modu()"><b>modu</b></button>
+                         </div>
+                         
+                    
+                    </div>
+                    
+                    
+                    
+                    <div class="calculator-content-two-content-two">
+                        
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="square-root" onclick="squareRoot()"><b>&radic;</b></button>
+                        </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="cube-root" onclick="cubeRoot()"><b>&sup3;&radic;</b></button>
+                            </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="square" onclick="square()"><b>x&sup2;</b></button>
+                            </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="cube" onclick="cube()"><b>x&sup3;</b></button>
+                            </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="raise-to-power" onclick="raiseTo()"><b>x<sup>y</sup></b></button>
+                        <button class="cal-con-two-btn-extra" id="x-root" onclick="xRoot()"><b><sup>x</sup>&radic;</b></button>
+                            </div>
+                    
+                    </div>
+                    
+                    <div class="calculator-content-two-content-two">
+                        
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="plus-minus" onclick="plusMinus()"><b>(-)</b></button>
+                        </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="left-bracket" onclick="leftBracket()"><b>(</b></button>
+                        </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="right-bracket" onclick="rightBracket()"><b>)</b></button>
+                        </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="m-minus" onclick="mMinus()"><b>M-</b></button>
+                        </div>
+                        <div class="calculator-content-two-content-two-btn">
+                        <button class="cal-con-two-btn" id="m-plus" onclick="mPlus()"><b>M+</b></button>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+                
+                <div class="calculator-content-three">
+                
+                    <div class="calculator-content-two-content-two">
+                    
+                        <button class="cal-con-three-btn" id="btn-seven"onclick="seven()"><b>7</b></button>
+                        <button class="cal-con-three-btn" id="btn-eight"onclick="eight()"><b>8</b></button>
+                        <button class="cal-con-three-btn" id="btn-nine"onclick="nine()"><b>9</b></button>
+                        <button class="cal-con-three-btn" id="del-btn"onclick="del()"><b>Del</b></button>
+                        <button class="cal-con-three-btn" id="reset"onclick="reset()"><b>Ac</b></button>
+                    
+                    </div>
+                    
+                    <div class="calculator-content-two-content-two">
+                    
+                        <button class="cal-con-three-btn" id="btn-four"onclick="four()"><b>4</b></button>
+                        <button class="cal-con-three-btn" id="btn-five"onclick="five()"><b>5</b></button>
+                        <button class="cal-con-three-btn" id="btn-six"onclick="six()"><b>6</b></button>
+                        <button class="cal-con-three-btn" id="multiply-btn"onclick="multiply()"><b>X</b></button>
+                        <button class="cal-con-three-btn" id="divide-btn"onclick="divide()"><b>&divide;</b></button>
+                    
+                    </div>
+                    
+                    <div class="calculator-content-two-content-two">
+                    
+                        <button class="cal-con-three-btn" id="btn-one"onclick="one()"><b>1</b></button>
+                        <button class="cal-con-three-btn" id="btn-two"onclick="two()"><b>2</b></button>
+                        <button class="cal-con-three-btn" id="btn-three"onclick="three()"><b>3</b></button>
+                        <button class="cal-con-three-btn" id="plus-btn"onclick="plus()"><b>+</b></button>
+                        <button class="cal-con-three-btn" id="minus-btn"onclick="minus()"><b>-</b></button>
+                    
+                    </div>
+                    
+                    <div class="calculator-content-two-content-two">
+                    
+                        <button class="cal-con-three-btn" id="btn-zero"onclick="zero()"><b>0</b></button>
+                        <button class="cal-con-three-btn" id="dot-btn"onclick="dot()"><b>.</b></button>
+                        <button class="cal-con-three-btn" id="exp-btn"onclick="exp()"><b>Exp</b></button>
+                        <button class="cal-con-three-btn" id="ans-btn"onclick="ans()"><b>Ans</b></button>
+                        <button class="cal-con-three-btn" id="equals-btn"onclick="return(equals())"><b>=</b></button>
+                    
+                    </div>
+                    
+                </div>
+            
+            </div>
+            
+        </div>
+    
+    </body>
+
+</html>
