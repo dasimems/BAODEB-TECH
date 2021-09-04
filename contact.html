@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="BAODEB TECH LTD">
+        <meta name="keyword" content="Baodeb tech ltd">
+        <title>BAODEB TECH | CONTACT</title>
+
+        <link rel="icon" href="css/images/logo.jpg">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/all.css">
+        <script src="js/all.js"></script>
+        <script src="js/babel.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="contact-header"></div>
+            
+                <a href="index.html"><img src="css/images/logo.jpg" alt="logo"></a>
+
+                <ul class="destop-link">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li id="active-link"><a href="#">Contact</a></li>
+                </ul>
+
+                <div class="menu-btn">
+                    <div class="open-cloose-btn" id="btn1"></div>
+                    <div class="open-cloose-btn" id="btn2"></div>
+                    <div class="open-cloose-btn" id="btn3"></div>
+                </div>
+
+                <div class="mobile-menu">
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li id="mobile-active-link"><a href="#">Contact</a></li>
+                    </ul>
+    
+
+                </div>
+
+        </header>
+
+        <div class="contact" style="margin-top: 0;padding-top: 100px;">
+
+            <div class="map">
+
+                <h2>Our Location</h2>
+
+                <div class="map-frame"><iframe src="https://www.google.com"></iframe></div>
+
+            </div>
+
+            <div class="contact-form">
+                
+                <div class="contact-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean odio nulla, placerat ut massa nec, bibendum elementum elit. Suspendisse elementum varius lectus.
+                    </p>
+
+                    <div class="contact-icons">
+
+                        <ul>
+                            <li><i class="fab fa-facebook-f" onclick="openUrl('https://www.facebook.com')"></i></li>
+                            <li><i class="fab fa-instagram" onclick="openUrl('https://www.instagram.com')"></i></li>
+                            <li><i class="fab fa-whatsapp" onclick="openUrl('https://www.wa.me.com')"></i></li>
+                            <li><i class="fab fa-linkedin-in" onclick="openUrl('https://www.linkedin.com')"></i></li>
+                            <li><i class="fab fa-twitter" onclick="openUrl('https://www.twitter.com')"></i></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="contact-form-inputs">
+
+                    <form action="submit-contact.php" method="POST">
+
+                        
+                                    <input type="text" class="name" placeholder="Name">
+                                    <input type="tel" class="tel" placeholder="Telephone">
+                                    <input type="email" class="email" placeholder="E-mail">
+                                    <input type="text" class="address" placeholder="Address">
+                                    <textarea class="message" placeholder="Complaint"></textarea>
+                                    <input type="submit" class="submit" value="Submit">
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <p>BAODEB TECH &copy; 2021</p>
+        </footer>
+
+        <script src="js/javascript.js"></script>
+
+    </body>
+
+</html>
